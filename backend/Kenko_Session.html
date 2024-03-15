@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sessionStyles.css" />
+    <script src="Main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Kenko Fitness Management System</h1>
+      </div>
+    </header>
+    <form action="/submit-session" method="post">
+      <div class="Session_homepage">
+        <h1>Session</h1>
+        <div class="Session_UserInputs">
+          <div class="Session_PackageName">
+            <label for="package">Package Name:</label>
+            <select id="package" name="package">
+              <!-- Options will be dynamically populated using JavaScript -->
+            </select>
+          </div>
+          <div class="Session_CustomerName">
+            <label for="customer">Customer Name:</label>
+            <input type="text" id="customer" name="customer" placeholder="Enter customer name" />
+          </div>
+          <div class="buttons">
+            <a type="button" href="/backend/Kenko_SessionTbl.html">
+            Submit
+            </a>
+             
+            </button>
+            <button onclick="window.location.href = 'Kenko_home.html';">Return</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  <script>
+    // Fetch package names from the server
+    fetch('/packages')
+      .then(response => response.json())
+      .then(data => {
+        const select = document.getElementById('package');
+        data.forEach(package => {
+          const option = document.createElement('option');
+          option.value = package.Package_ID; // Assuming Package_ID is the ID of the package
+          option.textContent = package.Name; // Assuming Name is the name of the package
+          select.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching package names:', error);
+      });
+  </script>
+  </body>
+</html>

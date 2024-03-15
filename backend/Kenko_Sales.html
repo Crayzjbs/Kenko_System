@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Data</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Sale ID</th>
+                <th>Package ID</th>
+                <th>User ID</th>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="salesTableBody"></tbody>
+    </table>
+
+    <script>
+        // Fetch sales data from the server
+        fetch('http://localhost:3000/get-sales-data')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Fetched data:', data);
+            const salesTableBody = document.getElementById('salesTableBody');
+            // Clear existing table rows
+            salesTableBody.innerHTML = '';
+
+            // Populate the table with the fetched data
+            data.forEach(sale => {
+                const row = `
+                    <tr>
+                        <td>${sale.Sale_ID}</td>
+                        <td>${sale.Package_ID}</td>
+                        <td>${sale.User_ID}</td>
+                        <td>${sale.Date}</td>
+                        <td>${sale.Amount}</td>
+                    </tr>
+                `;
+                salesTableBody.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    </script>
+</body>
+</html>

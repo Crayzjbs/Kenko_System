@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    margin-right: 45rem;
+    height: 80vh;
+    padding: 0; /* Adjust the padding as needed */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Monthly_forms h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Center the text */
+    font-size: 40px;
+    font-weight: 200px;
+    text-align: center;
+  }
+  
+  .Monthly_Address label {
+    font-size: 20px;
+    font-weight: 400px;
+  }
+  
+  .Monthly_Name,
+  .Monthly_Category,
+  .Monthly_Programs,
+  .Monthly_Address,
+  .Monthly_streets,
+  .Monthly_SignUpDate {
+    margin-bottom: 30px;
+  }
+  
+  .Monthly_Name label,
+  .Monthly_Category label,
+  .Monthly_Programs label,
+  .Monthly_Address label,
+  .Monthly_streets label,
+  .Monthly_SignUpDate label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .Monthly_Name input,
+  .Monthly_Category input,
+  .Monthly_Category select,
+  .Monthly_Programs input[type="checkbox"],
+  .Monthly_Programs input[type="radio"],
+  .Monthly_Address input,
+  .Monthly_streets input,
+  .Monthly_SignUpDate input {
+    padding: 10px;
+    border: 2px solid #ccc; /* Make the border thicker */
+    border-radius: 5px;
+    width: 400%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a drop shadow */
+  }
+  .Monthly_Name input::placeholder,
+  .Monthly_Category input::placeholder,
+  .Monthly_Address input::placeholder,
+  .Monthly_streets input::placeholder,
+  .Monthly_SignUpDate input::placeholder {
+    color: #aaa;
+  }
+  
+  .Monthly_Name input:hover,
+  .Monthly_Category input:hover,
+  .Monthly_Category select:hover,
+  .Monthly_Address input:hover,
+  .Monthly_streets input:hover,
+  .Monthly_SignUpDate input:hover {
+    border-color: #007bff;
+  }
+  
+  .Monthly_Name input:focus,
+  .Monthly_Category input:focus,
+  .Monthly_Category select:focus,
+  .Monthly_Address input:focus,
+  .Monthly_streets input:focus,
+  .Monthly_SignUpDate input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .Monthly_SignUpDate input {
+    width: 100%; /* Change the width to extend the input field */
+  }
+  
+  .Monthly_Programs {
+    margin-bottom: 20px;
+  }
+  
+  .Monthly_Programs label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .Monthly_Programs input[type="checkbox"],
+  .Monthly_Programs input[type="radio"] {
+    display: none;
+  }
+  
+  .Monthly_Programs input[type="checkbox"] + label,
+  .Monthly_Programs input[type="radio"] + label {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .Monthly_Programs input[type="checkbox"]:checked + label,
+  .Monthly_Programs input[type="radio"]:checked + label {
+    background-color: orange;
+    color: white;
+  }
+  
+  .Monthly_Programs label:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .Monthly_Programs div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Monthly_Programs label {
+    flex: 1;
+    margin-right: 10px; /* Adjust the spacing between checkboxes and radio buttons */
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    margin-top: 20px;
+    padding-left: 10px; /* Add some left padding for spacing */
+  }
+  
+  .buttons button {
+    margin: 0 10px; /* Adjust margin as needed */
+    margin-bottom: 2rem;
+  }
+  
+  button[type="next"],
+  button[type="submit"],
+  button[type="button"] {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  button[type="next"]:hover,
+  button[type="submit"]:hover,
+  button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  

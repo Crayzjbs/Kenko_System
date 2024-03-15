@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenko Fitness Management System</title>
+    <link rel="stylesheet" href="Kenko_Monthly.css">
+</head>
+<body>
+    <header>
+        <h1>Kenko Fitness Management System</h1>
+    </header>
+    <main>
+        <div class="Monthly_forms">
+            <h1>MONTHLY</h1>
+            <form id="monthlyForm" action="/submit-monthly" method="POST">
+                <div class="Monthly_Name">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter customer's name" required><br><br>
+                </div>
+
+                <div class="Monthly_Birthdate">
+                    <label for="birthdate">Birthdate:</label><br>
+                    <input type="date" id="birthdate" name="birthdate" required><br><br>
+                </div>
+
+                <div class="Monthly_Note">
+                    <label for="note">Note:</label><br>
+                    <input type="text" id="note" name="note"><br><br>
+                </div>
+
+                <div class="Monthly_Category">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="member">Member</option>
+                        <option value="student">Student</option>
+                        <option value="regular">Regular</option>
+                    </select><br><br>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select><br><br>
+                    
+                    <label for="contact">Contact:</label><br>
+                    <input type="tel" id="contact" name="contact" placeholder="Enter customer's Phone number" required><br><br>
+                </div>
+
+                <div class="Monthly_address">
+                    <label for="address">Address:</label><br>
+                    <input type="text" name="address" id="address" placeholder="Enter customer's address"><br><br>
+                </div>
+
+                <div class="Monthly_program">
+                    <label for="program">Program:</label>
+                    <select id="program" name="program" required>
+                        <option value="1">Program 1</option>
+                        <option value="2">Program 2</option>
+                        <option value="3">Program 3</option>
+                    </select><br><br>
+                </div>
+
+                <div class="Monthly_package">
+                    <label for="package">Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="1">Package 1</option>
+                        <option value="2">Package 2</option>
+                        <option value="3">Package 3</option>
+                    </select><br><br>
+                </div>
+                
+                <div class="Rate_buttons">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <button onclick="window.location.href = 'Kenko_home.html';">Return</button>
+            <a href="/backend/Kenko_Dashboard.html" class="button">Dashboard</a>
+        </div>
+    </main>
+</body>
+</html>
